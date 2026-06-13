@@ -39,6 +39,19 @@ This project analyzes the Netflix Movies and TV Shows dataset using Python and P
 * netflix_analysis.py
 * netflix_charts.py
 * netflix_content_types.png
+* Projects
+
+1. Titanic Survival Analysis
+   - Python
+   - Pandas
+   - Data Cleaning
+   - EDA
+
+2. Netflix Content Analysis
+   - Python
+   - Pandas
+   - Matplotlib
+   - Data Visualization
 
 ## Skills Demonstrated
 
