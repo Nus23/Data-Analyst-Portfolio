@@ -1,0 +1,11 @@
+CustomerID,CustomerName,Product,Category,Quantity,Price
+1,John,Laptop,Electronics,1,800
+2,Sarah,Phone,Electronics,2,600
+3,Ali,Tablet,Electronics,1,400
+4,Emma,Headphones,Accessories,3,50
+5,David,Keyboard,Accessories,2,80
+6,Mary,Monitor,Electronics,1,250
+7,James,Mouse,Accessories,4,25
+8,Sophia,Phone,Electronics,1,600
+9,Noah,Laptop,Electronics,1,800
+10,Olivia,Keyboard,Accessories,1,80

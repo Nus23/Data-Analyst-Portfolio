@@ -2,28 +2,29 @@
 
 ## Project Overview
 
-This project analyses customer sales data using SQL to identify:
-
-- Top-selling products
-- Highest-value customers
-- Monthly sales trends
-- Revenue by category
+This project analyzes customer sales data using SQL queries.
 
 ## Skills Demonstrated
 
-- SELECT
-- WHERE
+- SQL
 - GROUP BY
 - ORDER BY
-- JOIN
 - Aggregate Functions
+- Business Reporting
 
-## Tools
+## Analysis Performed
+
+- Total sales by category
+- Product performance
+- Revenue analysis
+- Average pricing
+
+## Tools Used
 
 - SQL
-- Excel
+- VS Code
 - GitHub
 
-## Status
+## Author
 
-In Progress
+Nusrat Jahan Onia
