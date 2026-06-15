@@ -25,7 +25,7 @@ Coming soon.
 ### 2. Excel Sales Dashboard
 Coming soon.
 
-### 3. Power BI Retail Dashboard
+### 3. Power BI Sales Dashboard
 Coming soon.
 
 ### 4. Python Customer Churn Analysis
