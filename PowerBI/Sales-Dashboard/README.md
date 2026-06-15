@@ -1,89 +1,102 @@
-# Sales Dashboard | Power BI Project
+# Sales Performance Dashboard | Power BI Project
 
 ## Project Overview
 
-This Power BI project analyses sales performance using a retail sales dataset. The dashboard provides clear insights into sales, profit, orders, customer segments, product categories, regional performance, and monthly trends.
+This Power BI project analyses retail sales performance using a Superstore sales dataset. The dashboard provides a clear overview of sales, orders, customers, average order value, delivery time, regional performance, product categories, and monthly sales trends.
 
-The aim of this project is to demonstrate practical data analyst skills, including data cleaning, data modelling, DAX measure creation, KPI reporting, dashboard design, and business insight generation.
+This project was created as part of my Data Analyst portfolio to demonstrate practical Power BI skills, including data import, data cleaning, data modelling, DAX measure creation, dashboard design, and business insight generation.
 
 ## Business Objective
 
-The objective of this dashboard is to help a business understand:
+The objective of this dashboard is to help a business understand sales performance and answer key questions such as:
 
-* Overall sales and profit performance
-* Monthly sales trends
-* Best-performing products and categories
-* Regional sales and profitability
-* Customer segment performance
-* Areas where sales are high but profit is low
-* Operational patterns such as delivery time
+* What is the total sales performance?
+* How many orders and customers are included in the dataset?
+* Which region generates the highest sales?
+* Which product categories contribute most to sales?
+* What are the top-selling products?
+* How does sales performance change over time?
+* What is the average order value?
+* What is the average delivery time?
 
 ## Dataset
 
-The project uses a retail sales dataset containing order-level sales records.
+The dataset used for this project is a Superstore sales dataset.
 
-Example fields include:
+The dataset includes order-level sales records with fields such as:
 
 * Order ID
 * Order Date
 * Ship Date
+* Ship Mode
+* Customer ID
 * Customer Name
 * Segment
+* Country
+* City
+* State
 * Region
+* Product ID
 * Category
 * Sub-Category
 * Product Name
 * Sales
 * Quantity
 * Discount
-* Profit
+
+Note: The version of the dataset used in this project did not include a Profit column, so the dashboard focuses on sales performance rather than profitability analysis.
 
 ## Tools Used
 
 * Power BI Desktop
 * Power Query
 * DAX
-* Microsoft Excel / CSV
+* CSV dataset
 * GitHub
 
 ## Data Cleaning and Preparation
 
-The dataset was cleaned and prepared in Power Query. Key steps included:
+The dataset was cleaned and prepared in Power Query before building the dashboard.
 
-* Checking and correcting data types
-* Formatting date columns
-* Removing unnecessary columns
-* Checking missing values
-* Creating a delivery time column
-* Preparing the data model for analysis
-* Creating a separate Date Table for time-based analysis
+Key cleaning steps included:
+
+* Imported the CSV file into Power BI
+* Renamed the main query/table to Orders
+* Checked and corrected data types
+* Set Order Date and Ship Date as Date fields
+* Set Sales as a decimal number
+* Removed unnecessary columns such as Row ID and Postal Code
+* Created a new Delivery Days column using Ship Date and Order Date
+* Loaded the cleaned data into Power BI
 
 ## Data Model
 
-A Date Table was created and connected to the main sales table using the Order Date field. This enabled monthly, yearly, and time-based sales analysis.
+A separate Date Table was created using DAX to support time-based analysis.
 
-## Key DAX Measures
+The Date Table includes:
 
-The following DAX measures were created:
+* Date
+* Year
+* Month Number
+* Month Name
+* Year Month
+
+A relationship was created between:
+
+Date Table[Date] and Orders[Order Date]
+
+This allows the dashboard to analyse sales by month and year.
+
+## DAX Measures
+
+The following DAX measures were created for the dashboard:
 
 ```DAX
-Total Sales = SUM(Orders[Sales])
+Total Sales = SUM('Orders'[Sales])
 ```
 
 ```DAX
-Total Profit = SUM(Orders[Profit])
-```
-
-```DAX
-Total Orders = DISTINCTCOUNT(Orders[Order ID])
-```
-
-```DAX
-Total Quantity = SUM(Orders[Quantity])
-```
-
-```DAX
-Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)
+Total Orders = DISTINCTCOUNT('Orders'[Order ID])
 ```
 
 ```DAX
@@ -91,122 +104,88 @@ Average Order Value = DIVIDE([Total Sales], [Total Orders], 0)
 ```
 
 ```DAX
-Average Delivery Days = AVERAGE(Orders[Delivery Days])
+Average Delivery Days = AVERAGE('Orders'[Delivery Days])
 ```
 
-## Dashboard Pages
+```DAX
+Total Customers = DISTINCTCOUNT('Orders'[Customer ID])
+```
 
-### 1. Executive Sales Overview
+## Dashboard Features
 
-This page provides a high-level summary of business performance using KPI cards and main trend visuals.
-
-Key visuals:
+The dashboard includes the following KPI cards:
 
 * Total Sales
-* Total Profit
 * Total Orders
-* Profit Margin
+* Total Customers
+* Average Delivery Days
+* Average Order Value
+
+The dashboard also includes the following visuals:
+
 * Monthly Sales Trend
 * Sales by Region
 * Sales by Category
-* Top Products by Sales
-
-### 2. Product Performance
-
-This page analyses product categories, sub-categories, and individual product performance.
-
-Key visuals:
-
-* Sales by Category
-* Profit by Category
-* Sales by Sub-Category
-* Profit by Sub-Category
 * Top 10 Products by Sales
-* Bottom 10 Products by Profit
 
-### 3. Regional Sales Analysis
+Interactive slicers were added for:
 
-This page compares sales and profit performance across regions and locations.
-
-Key visuals:
-
-* Sales by Region
-* Profit by Region
-* Orders by Region
-* Profit Margin by Region
-* Sales by State or City
-
-### 4. Customer Segment Analysis
-
-This page analyses sales and profitability by customer segment.
-
-Key visuals:
-
-* Sales by Segment
-* Profit by Segment
-* Orders by Segment
-* Average Order Value by Segment
-* Monthly Sales by Segment
+* Year
+* Region
+* Category
 
 ## Key Insights
 
-The dashboard can be used to answer business questions such as:
+The dashboard shows the following insights:
 
-1. Which region generates the highest sales?
-2. Which product categories are most profitable?
-3. Which products have high sales but low profit?
-4. Which customer segment contributes the most revenue?
-5. How do sales change over time?
-6. Are there any seasonal sales patterns?
-7. How does delivery time vary across orders?
+1. Total sales are approximately $2.26M across the dataset.
+2. The dataset includes around 5K orders and 793 customers.
+3. The West region generated the highest sales compared with other regions.
+4. Technology, Furniture, and Office Supplies are the main product categories.
+5. The dashboard highlights the top 10 products by sales.
+6. Monthly sales trends help identify changes in sales performance over time.
+7. Slicers allow users to filter the dashboard by Year, Region, and Category.
 
-## Skills Demonstrated
-
-This project demonstrates the following data analyst skills:
-
-* Power BI dashboard development
-* Power Query data cleaning
-* DAX measure creation
-* Data modelling
-* KPI reporting
-* Sales and profit analysis
-* Business intelligence reporting
-* Data visualisation
-* Insight generation
-* GitHub project documentation
-
-## Project Files
+## Project Folder Structure
 
 ```text
-Sales-Dashboard/
+Sales-Dashboard
 │
 ├── README.md
-├── data/
+├── data
 │   └── superstore_sales.csv
 │
-├── powerbi/
+├── powerbi
 │   └── Sales_Dashboard.pbix
 │
-├── images/
-│   ├── dashboard_overview.png
-│   ├── sales_trend.png
-│   └── profit_analysis.png
+├── images
+│   └── dashboard_overview.png
 │
-└── notes/
+└── notes
     └── insights.md
 ```
 
 ## Dashboard Preview
 
-Screenshots of the dashboard will be added after the Power BI report is completed.
+![Sales Dashboard Overview](images/dashboard_overview.png)
 
-Example screenshots to include:
+## Skills Demonstrated
 
-* Executive Sales Overview
-* Product Performance
-* Regional Sales Analysis
-* Customer Segment Analysis
+This project demonstrates the following skills:
+
+* Power BI dashboard development
+* Data cleaning using Power Query
+* Data modelling
+* Creating a Date Table
+* Building relationships between tables
+* Writing DAX measures
+* Creating KPI cards
+* Creating interactive charts
+* Using slicers for dashboard filtering
+* Sales analysis
+* Business intelligence reporting
+* GitHub project documentation
 
 ## Conclusion
 
-This project demonstrates how Power BI can be used to transform raw sales data into meaningful business insights. The dashboard helps users monitor sales performance, identify profitable areas, understand customer behaviour, and support data-driven decision-making.
+This Power BI Sales Performance Dashboard transforms raw sales data into meaningful business insights. The dashboard allows users to monitor sales trends, compare regional performance, identify top product categories, and understand key sales metrics through a clean and interactive report.
