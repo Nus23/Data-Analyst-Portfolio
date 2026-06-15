@@ -9,3 +9,4 @@
 4. Technology, Furniture, and Office Supplies are the main product categories.
 5. Monthly sales trends show sales performance changes over time.
 6. The dashboard allows users to filter results by Year, Region, and Category.
+7. <img width="972" height="542" alt="image" src="https://github.com/user-attachments/assets/d844e082-55ec-444e-85c9-c7adb6952631" />
