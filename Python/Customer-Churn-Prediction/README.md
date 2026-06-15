@@ -97,7 +97,7 @@ Model:
 4.	Train-Test Split
 5.	Model Training
 6.	Model Evaluation Performance:
-• Accuracy: (Update after running churn_prediction_model.py)
+• Accuracy: 82.19%
  
 Key Business Insights
 1.	Month-to-month contracts have the highest churn risk.
