@@ -168,6 +168,7 @@ Sales-Dashboard
 ## Dashboard Preview
 
 ![Sales Dashboard Overview](images/dashboard_overview.png)
+<img width="972" height="542" alt="image" src="https://github.com/user-attachments/assets/0a67f2af-c3b9-45c1-8fb2-088c2dd0003e" />
 
 ## Skills Demonstrated
 
