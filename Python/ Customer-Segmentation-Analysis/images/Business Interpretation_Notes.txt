@@ -1,0 +1,56 @@
+Business Interpretation
+Cluster 2 (13 Customers) ⭐ VIP Customers
+
+These customers:
+
+Spend the most money
+Buy very frequently
+Generate a large portion of revenue
+
+Business action:
+
+Loyalty rewards
+VIP discounts
+Early access to products
+Personalized marketing
+Cluster 3 (204 Customers) 💎 High-Value Customers
+
+These customers:
+
+Spend a lot
+Purchase regularly
+Very valuable segment
+
+Business action:
+
+Upselling campaigns
+Cross-selling recommendations
+Exclusive offers
+Cluster 0 (3,054 Customers) 👥 Regular Customers
+
+Largest customer group.
+
+These customers:
+
+Moderate spending
+Moderate frequency
+Stable customer base
+
+Business action:
+
+Retention campaigns
+Email marketing
+Product recommendations
+Cluster 1 (1,067 Customers) ⚠ At-Risk / Low-Value Customers
+
+These customers:
+
+Low spending
+Low purchase frequency
+Less engaged
+
+Business action:
+
+Re-engagement offers
+Discount coupons
+Abandoned customer campaigns
