@@ -1,0 +1,10 @@
+python
+data-analysis
+customer-segmentation
+machine-learning
+kmeans
+rfm-analysis
+pandas
+matplotlib
+scikit-learn
+portfolio-project
